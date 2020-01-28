@@ -1,0 +1,82 @@
+﻿# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+#sounds
+
+label start:
+    jump firstScene
+    return
+    
+label firstScene:
+    define jill = Character("Jill")
+
+    define adam = Character("Adam S.",image="adam")
+    define paul = Character("Paul Blart",image="paul")
+    
+    #char images
+    image adam_s =  im.Scale("adam_but_kawaii.png", 900, 900) 
+    image paul_b =  im.Scale("paul_mall.png", 900, 900) 
+    
+    # bg images
+    image locker_bg =im.Scale("locker.png", 2000, 2000) 
+
+
+    "ring...{w}\nring..."
+    "There goes the school bell. Thats it, I thought. It’s done."
+    "It was the last day of sanders university, and the first day of the rest of my life."
+    
+    scene locker_bg 
+    with fade
+    
+    play music "music/asds_music.mp3"
+    paul "Hey Jill wait up!" with vpunch
+    show paul_b
+    with easeintop
+    paul "To celebrate the end of school, wanna go down to the nearest six guys and grab some burgies?"
+    
+    jill "Yeah sure! Just let me clean my locker."
+    
+    paul "No problemo. Im going to wait outside."
+    hide paul_b
+    with dissolve
+    "That’s my best friend, Paul Blart. We grew up together since we were young, and planned to go to the same university. I made it in as a student, and him as the security guard"
+    
+    "I hurry to the locker room, not looking where I’m going as I’m thinking of my summer plans{w},
+    \nShopping{w}, days on the beach{w}, maybe...{w} I’ll even find a boyfr….."
+    
+    "* SLAM *" with vpunch
+    
+    "I fall to the floor, my head throbbing in pain.{w} I look around, to see someone on the floor in front of me."
+     
+    jill "“Hey watch where you’re going!!!”" with hpunch
+    
+    "He slowly turns his head, allowing me to get a good look at him."
+    
+    show adam_s
+    with easeinbottom
+    
+    adam "oh sorry. Guess I wasn’t watching where I was going."
+    
+    "Holy sh*t. Thats Adam Sandler. The Adam Sandler. Most popular guy in school, varsity esports captain, valid victorian Adam Sandler. And I bumped into him."
+    
+    jill "“OMG{w} I AM SO SORRY{w} THAT WAS ALL MY FAULT{w} I{w} WASNT{w} WATCHING{w} AND I…"
+    
+    adam "woah calm down. Really, theres no issue. It was my bad. Haha"
+    show adam_s:
+        yoffset 0
+        easein 0.25 yoffset -100
+        easeout 0.25 yoffset 0
+        easein 0.2 yoffset -30
+        easeout 0.2 yoffset 0
+        easein 0.15 yoffset -10
+        easeout 0.15 yoffset 0
+        easein 0.1 yoffset -4
+        easeout 0.1 yoffset 0
+    
+    "Oh my God. Did Adam Sandler really just forgive me? I swear to god I will never forget this."
+    
+    "I scan around and see his things all around the floor."
+    return
+    

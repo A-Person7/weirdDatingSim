@@ -1,0 +1,48 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 34, in script
+    paul "Hey Jill wait up!" with vpunch
+IOError: Couldn't find file 'asds_music.mp3'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 34, in script
+    paul "Hey Jill wait up!" with vpunch
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\ast.py", line 694, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\exports.py", line 1322, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\character.py", line 1127, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\ui.py", line 289, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\display\core.py", line 2690, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\display\core.py", line 3110, in interact_core
+    renpy.audio.audio.interact()
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\audio\audio.py", line 1066, in interact
+    periodic()
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\audio\audio.py", line 1019, in periodic
+    six.reraise(exc[0], exc[1], exc[2])
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\audio\audio.py", line 997, in periodic_thread_main
+    periodic_pass()
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\audio\audio.py", line 938, in periodic_pass
+    c.periodic()
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\audio\audio.py", line 420, in periodic
+    topf = load(self.file_prefix + filename + self.file_suffix)
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\audio\audio.py", line 72, in load
+    rv = renpy.loader.load(fn)
+  File "C:\Users\tyler\Downloads\renpy-7.2.2-sdk\renpy\loader.py", line 576, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'asds_music.mp3'.
+
+Windows-8-6.2.9200
+Ren'Py 7.2.2.491
+ASDS 1.0
+Wed Aug 14 19:12:28 2019
